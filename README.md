@@ -31,7 +31,7 @@
 
 不同的OneDrive目录程序所能挂载账户数量不尽相同，而我又不忍舍弃，所以部分网站同时挂载了九个盘，部分只挂载了一个盘。当然 **Root** 这个盘符是对网站整体九个盘抽象而言的，并不存在这样一个OneDrive账户。
 
-- ![](https://img.shields.io/badge/Root-orange) 总盘 ：同时挂载以下就九个盘。
+- ![](https://img.shields.io/badge/Root-orange) 总盘 ：同时挂载以下九个盘。
 - ![](https://img.shields.io/badge/Rep-orange) 仓库盘 ：存放杂七杂八的资源。
 - ![](https://img.shields.io/badge/Ani-orange) 动画盘 ：存放动画。
 - ![](https://img.shields.io/badge/Mov-orange) 电影盘 ：存放电影、纪录片。
