@@ -1,0 +1,140 @@
+name: copy README.md README
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  run-it:
+    runs-on: ubuntu-latest
+    name: SyncReadme
+    steps:
+
+      - name: Checkout codes
+        uses: actions/checkout@v2
+
+      - name: Install rclone
+        run: |
+          curl https://rclone.org/install.sh | sudo bash
+          mkdir -p ~/.config/rclone/
+          wget ${{ secrets.RCCF }} -P ~/.config/rclone/
+          
+      - name: copy README.md readme-crotlk
+        run: |
+          rclone copy README.md pub-crotlk:
+          rclone copy README.md pub-crotlk:rep/
+          rclone copy README.md ani-crotlk:
+          rclone copy README.md ani-crotlk:ani/
+          rclone copy README.md mov-crotlk:
+          rclone copy README.md mov-crotlk:mov/
+          rclone copy README.md doc-crotlk:
+          rclone copy README.md doc-crotlk:doc/
+          rclone copy README.md tlv1-crotlk:
+          rclone copy README.md tlv1-crotlk:tlv/
+          rclone copy README.md tlv2-crotlk:
+          rclone copy README.md tlv2-crotlk:tlv/
+          rclone copy README.md 4k1-crotlk:
+          rclone copy README.md 4k1-crotlk:4k/
+          rclone copy README.md 4k2-crotlk:
+          rclone copy README.md 4k2-crotlk:4k/
+          rclone copy README.md 4k3-crotlk:
+          rclone copy README.md 4k3-crotlk:4k/
+  
+      - name: copy README.md readme-wtrt
+        run: |
+          rclone copy README.md pub-wtrt:
+          rclone copy README.md pub-wtrt:rep/
+          rclone copy README.md ani-wtrt:
+          rclone copy README.md ani-wtrt:ani/
+          rclone copy README.md mov-wtrt:
+          rclone copy README.md mov-wtrt:mov/
+          rclone copy README.md doc-wtrt:
+          rclone copy README.md doc-wtrt:doc/
+          rclone copy README.md tlv1-wtrt:
+          rclone copy README.md tlv1-wtrt:tlv/
+          rclone copy README.md tlv2-wtrt:
+          rclone copy README.md tlv2-wtrt:tlv/
+          rclone copy README.md 4k1-wtrt:
+          rclone copy README.md 4k1-wtrt:4k/
+          rclone copy README.md 4k2-wtrt:
+          rclone copy README.md 4k2-wtrt:4k/
+          rclone copy README.md 4k3-wtrt:
+          rclone copy README.md 4k3-wtrt:4k/
+          
+      - name: copy README.md readme-bb
+        run: |
+          rclone copy README.md pub-bb:
+          rclone copy README.md pub-bb:rep/
+          rclone copy README.md ani-bb:
+          rclone copy README.md ani-bb:ani/
+          rclone copy README.md mov-bb:
+          rclone copy README.md mov-bb:mov/
+          rclone copy README.md doc-bb:
+          rclone copy README.md doc-bb:doc/
+          rclone copy README.md tlv1-bb:
+          rclone copy README.md tlv1-bb:tlv/
+          rclone copy README.md tlv2-bb:
+          rclone copy README.md tlv2-bb:tlv/
+          rclone copy README.md 4k1-bb:
+          rclone copy README.md 4k1-bb:4k/
+          rclone copy README.md 4k2-bb:
+          rclone copy README.md 4k2-bb:4k/
+          rclone copy README.md 4k3-bb:
+          rclone copy README.md 4k3-bb:4k/
+          
+      - name: copy README.md readme-eu
+        run: |
+          rclone copy README.md pub-eu:
+          rclone copy README.md pub-eu:rep/
+          rclone copy README.md ani-eu:
+          rclone copy README.md ani-eu:ani/
+          rclone copy README.md mov-eu:
+          rclone copy README.md mov-eu:mov/
+          rclone copy README.md doc-eu:
+          rclone copy README.md doc-eu:doc/
+          rclone copy README.md tlv1-eu:
+          rclone copy README.md tlv1-eu:tlv/
+          rclone copy README.md tlv2-eu:
+          rclone copy README.md tlv2-eu:tlv/
+          rclone copy README.md 4k1-eu:
+          rclone copy README.md 4k1-eu:4k/
+          rclone copy README.md 4k2-eu:
+          rclone copy README.md 4k2-eu:4k/
+          rclone copy README.md 4k3-eu:
+          rclone copy README.md 4k3-eu:4k/
+          
+      - name: copy README.md readme-rc
+        run: |
+          rclone copy README.md pub-rc:
+          rclone copy README.md pub-rc:rep/
+          rclone copy README.md ani-rc:
+          rclone copy README.md ani-rc:ani/
+          rclone copy README.md mov-rc:
+          rclone copy README.md mov-rc:mov/
+          rclone copy README.md doc-rc:
+          rclone copy README.md doc-rc:doc/
+          rclone copy README.md tlv1-rc:
+          rclone copy README.md tlv1-rc:tlv/
+          rclone copy README.md tlv2-rc:
+          rclone copy README.md tlv2-rc:tlv/
+          rclone copy README.md 4k1-rc:
+          rclone copy README.md 4k1-rc:4k/
+          rclone copy README.md 4k2-rc:
+          rclone copy README.md 4k2-rc:4k/
+          rclone copy README.md 4k3-rc:
+          rclone copy README.md 4k3-rc:4k/
+
+      - name: copy README.md readme-ttn
+        run: |
+          rclone copy README.md pub-ttn:
+          rclone copy README.md pub-ttn:rep/
+          rclone copy README.md ani-ttn:
+          rclone copy README.md ani-ttn:ani/
+          rclone copy README.md mov-ttn:
+          rclone copy README.md mov-ttn:mov/
+          rclone copy README.md doc-ttn:
+          rclone copy README.md doc-ttn:doc/
+          rclone copy README.md tlv1-ttn:
+          rclone copy README.md tlv1-ttn:tlv/
+          rclone copy README.md tlv2-ttn:
+          rclone copy README.md tlv2-ttn:tlv/
